@@ -1,0 +1,266 @@
+<manifest alg="2" build="2018.1.1.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="Antoniojimenez.github.io" resolutions="1x" timestamp="1673939229875">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="index.css" crc="3804496026" ref="index"/>
+    <file name="nomq_index.css" crc="3972581505" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:index"/>
+    <file name="museutils.js" crc="3939489907" ref="phone>index:index"/>
+    <file name="whatinput.js" crc="86476730" ref="phone>index:index"/>
+    <file name="museconfig.js" crc="3936894949" ref="phone>index:index"/>
+    <file name="jquery.watch.js" crc="522499760" ref="phone>index:index"/>
+    <file name="require.js" crc="4177726516" ref="phone>index:index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="85124417" ref="index"/>
+    <file name="webpro.js" crc="3856315280" ref="index"/>
+    <file name="musewpslideshow.js" crc="244150766" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="3877667098" ref="index"/>
+    <file name="touchswipe.js" crc="3888935200" ref="index"/>
+    <file name="jquery.scrolleffects.js" crc="312044820" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="95814420" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="favicon.ico" crc="4011987384" ref="phone>index"/>
+    <file name="logros.png" crc="467155890" ref="phone>index:index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u326-4.png" crc="4262847395" ref="index"/>
+    <file name="u340-4.png" crc="291157938" ref="index"/>
+    <file name="u346-4.png" crc="4079206419" ref="index"/>
+    <file name="u352-10.png" crc="512388077" ref="index"/>
+    <file name="ubicación.png" crc="502715144" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="u473.png" crc="64523617" ref="index"/>
+    <file name="u473-r.png" crc="64523617" ref="index"/>
+    <file name="u476.png" crc="301905990" ref="index"/>
+    <file name="u476-r.png" crc="301905990" ref="index"/>
+    <file name="experiencia.png" crc="386331976" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u474-4.png" crc="307906701" ref="index"/>
+    <file name="u477-4.png" crc="298684801" ref="index"/>
+    <file name="free lancer.png" crc="4098840469" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u475-4.png" crc="4202343972" ref="index"/>
+    <file name="u478-4.png" crc="4201346897" ref="index"/>
+    <file name="u563.png" crc="3843483447" ref="index"/>
+    <file name="u563-r.png" crc="4227767506" ref="index"/>
+    <file name="u563-m.png" crc="178469993" ref="index"/>
+    <file name="pexels-tatiana-fet-1105766.jpg" crc="3914498318" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u296-4.png" crc="104185863" ref="index"/>
+    <file name="u552-4.png" crc="3994840153" ref="index"/>
+    <file name="susan-q-yin-2jivbogleho-unsplash.jpg" crc="3788839026" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="pexels-muhammad-khairul-iddin-adnan-808510.jpg" crc="33942468" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u790-4.png" crc="3810147190" ref="index"/>
+    <file name="branding.png" crc="4263007858" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u919.png" crc="4285846711" ref="index"/>
+    <file name="u919-r.png" crc="4285846711" ref="index"/>
+    <file name="publicidad2.png" crc="3944064537" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u925.png" crc="350404924" ref="index"/>
+    <file name="u925-r.png" crc="350404924" ref="index"/>
+    <file name="publicidad impresa.png" crc="3765340880" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u931.png" crc="237738165" ref="index"/>
+    <file name="u931-r.png" crc="237738165" ref="index"/>
+    <file name="diseño web.png" crc="56713838" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u949.png" crc="3887610676" ref="index"/>
+    <file name="u949-r.png" crc="3887610676" ref="index"/>
+    <file name="tienda online.png" crc="354754798" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u946.png" crc="379478936" ref="index"/>
+    <file name="u946-r.png" crc="379478936" ref="index"/>
+    <file name="catalogo pdf.png" crc="4112200327" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u943-4.png" crc="4005854588" ref="index"/>
+    <file name="shoting fotografico.png" crc="3890286484" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u967.png" crc="183426139" ref="index"/>
+    <file name="u967-r.png" crc="183426139" ref="index"/>
+    <file name="community manager.png" crc="374886839" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u964.png" crc="331510227" ref="index"/>
+    <file name="u964-r.png" crc="331510227" ref="index"/>
+    <file name="disñode empaques.png" crc="3866078624" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u961.png" crc="3907551807" ref="index"/>
+    <file name="u961-r.png" crc="3907551807" ref="index"/>
+    <file name="u580-4.png" crc="4200811388" ref="index"/>
+    <file name="foto de perfil-u329-fr.jpg" crc="3963254185" ref="index"/>
+    <file name="u2252_states.png" crc="3789229994" ref="index"/>
+    <file name="u2252_states-r.png" crc="4025063604" ref="index"/>
+    <file name="u2266_states.png" crc="286252807" ref="index"/>
+    <file name="u2266_states-r.png" crc="506301053" ref="index"/>
+    <file name="u2263_states.png" crc="4177102524" ref="index"/>
+    <file name="u2263_states-r.png" crc="4270955093" ref="index"/>
+    <file name="u2278_states.png" crc="3881561672" ref="index"/>
+    <file name="u2278_states-r.png" crc="436801511" ref="index"/>
+    <file name="u2275.png" crc="193353020" ref="index"/>
+    <file name="u2275-r.png" crc="4177747532" ref="index"/>
+    <file name="u2284.png" crc="4134037723" ref="index"/>
+    <file name="u2284-r.png" crc="3887598305" ref="index"/>
+    <file name="menú-u2177-fr.png" crc="17625938" ref="index"/>
+    <file name="roll menu-u2177-r-fr.png" crc="286812503" ref="index"/>
+    <file name="activo-u2177-m-fr.png" crc="319268186" ref="index"/>
+    <file name="activo-u2173-fr.png" crc="3957180856" ref="index"/>
+    <file name="pexels-tatiana-fet-1105766-u285-fr.jpg" crc="3890385815" ref="index"/>
+    <file name="u296-42.png" crc="104185863" ref="index"/>
+    <file name="u552-42.png" crc="3994840153" ref="index"/>
+    <file name="u4732.png" crc="64523617" ref="index"/>
+    <file name="u473-r2.png" crc="64523617" ref="index"/>
+    <file name="u4762.png" crc="301905990" ref="index"/>
+    <file name="u476-r2.png" crc="301905990" ref="index"/>
+    <file name="u474-42.png" crc="307906701" ref="index"/>
+    <file name="u477-42.png" crc="298684801" ref="index"/>
+    <file name="u475-42.png" crc="4202343972" ref="index"/>
+    <file name="u478-42.png" crc="4201346897" ref="index"/>
+    <file name="u326-42.png" crc="4262847395" ref="index"/>
+    <file name="u340-42.png" crc="291157938" ref="index"/>
+    <file name="u346-42.png" crc="4079206419" ref="index"/>
+    <file name="u352-102.png" crc="512388077" ref="index"/>
+    <file name="u5632.png" crc="3843483447" ref="index"/>
+    <file name="u563-r2.png" crc="4227767506" ref="index"/>
+    <file name="u563-m2.png" crc="178469993" ref="index"/>
+    <file name="susan-q-yin-2jivbogleho-unsplash-u566-fr.jpg" crc="518998982" ref="index"/>
+    <file name="pexels-muhammad-khairul-iddin-adnan-808510-u2293-fr.jpg" crc="4000473788" ref="index"/>
+    <file name="u790-42.png" crc="3810147190" ref="index"/>
+    <file name="u9192.png" crc="4285846711" ref="index"/>
+    <file name="u919-r2.png" crc="4285846711" ref="index"/>
+    <file name="u9252.png" crc="350404924" ref="index"/>
+    <file name="u925-r2.png" crc="350404924" ref="index"/>
+    <file name="u9312.png" crc="237738165" ref="index"/>
+    <file name="u931-r2.png" crc="237738165" ref="index"/>
+    <file name="u9492.png" crc="3887610676" ref="index"/>
+    <file name="u949-r2.png" crc="3887610676" ref="index"/>
+    <file name="u9462.png" crc="379478936" ref="index"/>
+    <file name="u946-r2.png" crc="379478936" ref="index"/>
+    <file name="u943-42.png" crc="4005854588" ref="index"/>
+    <file name="u9672.png" crc="183426139" ref="index"/>
+    <file name="u967-r2.png" crc="183426139" ref="index"/>
+    <file name="u9642.png" crc="331510227" ref="index"/>
+    <file name="u964-r2.png" crc="331510227" ref="index"/>
+    <file name="u9612.png" crc="3907551807" ref="index"/>
+    <file name="u961-r2.png" crc="3907551807" ref="index"/>
+    <file name="u580-42.png" crc="4200811388" ref="index"/>
+    <file name="u2252_states2.png" crc="3837453663" ref="index"/>
+    <file name="u2252_states-r2.png" crc="237163225" ref="index"/>
+    <file name="u2266_states2.png" crc="4012791032" ref="index"/>
+    <file name="u2266_states-r2.png" crc="4045539623" ref="index"/>
+    <file name="u2263_states2.png" crc="4055199897" ref="index"/>
+    <file name="u2263_states-r2.png" crc="4249397581" ref="index"/>
+    <file name="u2278_states2.png" crc="4261952790" ref="index"/>
+    <file name="u2278_states-r2.png" crc="3763023008" ref="index"/>
+    <file name="u22752.png" crc="455090862" ref="index"/>
+    <file name="u2275-r2.png" crc="65190948" ref="index"/>
+    <file name="u22842.png" crc="134082307" ref="index"/>
+    <file name="u2284-r2.png" crc="87689641" ref="index"/>
+    <file name="u2252_states3.png" crc="3837453663" ref="index"/>
+    <file name="u2252_states-r3.png" crc="237163225" ref="index"/>
+    <file name="u2266_states3.png" crc="4012791032" ref="index"/>
+    <file name="u2266_states-r3.png" crc="4045539623" ref="index"/>
+    <file name="u2263_states3.png" crc="4055199897" ref="index"/>
+    <file name="u2263_states-r3.png" crc="4249397581" ref="index"/>
+    <file name="u2278_states3.png" crc="4261952790" ref="index"/>
+    <file name="u2278_states-r3.png" crc="3763023008" ref="index"/>
+    <file name="u22753.png" crc="455090862" ref="index"/>
+    <file name="u2275-r3.png" crc="65190948" ref="index"/>
+    <file name="u22843.png" crc="134082307" ref="index"/>
+    <file name="u2284-r3.png" crc="87689641" ref="index"/>
+    <file name="u296-43.png" crc="104185863" ref="index"/>
+    <file name="u552-43.png" crc="3994840153" ref="index"/>
+    <file name="u4733.png" crc="403303790" ref="index"/>
+    <file name="u473-r3.png" crc="403303790" ref="index"/>
+    <file name="u4763.png" crc="130238030" ref="index"/>
+    <file name="u476-r3.png" crc="130238030" ref="index"/>
+    <file name="u475-43.png" crc="424016855" ref="index"/>
+    <file name="u478-43.png" crc="269279146" ref="index"/>
+    <file name="u474-43.png" crc="290785170" ref="index"/>
+    <file name="u477-43.png" crc="4230029749" ref="index"/>
+    <file name="u326-43.png" crc="4262847395" ref="index"/>
+    <file name="u340-43.png" crc="291157938" ref="index"/>
+    <file name="u346-43.png" crc="4079206419" ref="index"/>
+    <file name="u352-103.png" crc="207552352" ref="index"/>
+    <file name="susan-q-yin-2jivbogleho-unsplash-u566-fr2.jpg" crc="130413547" ref="index"/>
+    <file name="u790-43.png" crc="3810147190" ref="index"/>
+    <file name="u9193.png" crc="4285846711" ref="index"/>
+    <file name="u919-r3.png" crc="4285846711" ref="index"/>
+    <file name="u9253.png" crc="350404924" ref="index"/>
+    <file name="u925-r3.png" crc="350404924" ref="index"/>
+    <file name="u9313.png" crc="237738165" ref="index"/>
+    <file name="u931-r3.png" crc="237738165" ref="index"/>
+    <file name="u9493.png" crc="3887610676" ref="index"/>
+    <file name="u949-r3.png" crc="3887610676" ref="index"/>
+    <file name="u9463.png" crc="379478936" ref="index"/>
+    <file name="u946-r3.png" crc="379478936" ref="index"/>
+    <file name="u943-43.png" crc="4005854588" ref="index"/>
+    <file name="u9673.png" crc="183426139" ref="index"/>
+    <file name="u967-r3.png" crc="183426139" ref="index"/>
+    <file name="u9643.png" crc="331510227" ref="index"/>
+    <file name="u964-r3.png" crc="331510227" ref="index"/>
+    <file name="u9613.png" crc="3907551807" ref="index"/>
+    <file name="u961-r3.png" crc="3907551807" ref="index"/>
+    <file name="u580-43.png" crc="4200811388" ref="index"/>
+    <file name="foto de perfil-u329-fr2.jpg" crc="3826179503" ref="index"/>
+    <file name="u5633.png" crc="3843483447" ref="index"/>
+    <file name="u563-r3.png" crc="4227767506" ref="index"/>
+    <file name="u563-m3.png" crc="178469993" ref="index"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="index.css" crc="183695081" ref="phone>index"/>
+      <file name="nomq_index.css" crc="3824530138" ref="phone>index"/>
+    </folder>
+    <file name="index.html" crc="4016286889" seo="true" mt="1673932489780" redirect="false"/>
+  </folder>
+  <file name="index.html" crc="4213811817" seo="true" mt="1673937184301" redirect="true"/>
+</manifest>
