@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+    <title>Antonio Jiménez</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Para el favicon en la pestaña activa -->
+    <link rel="icon" href="/img/Logo.png" type="image/x-icon">
+</head>
+<body class="todo">
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <!-- <a href="index.html">A</a> -->
+                <a href="index.html"><img src="img/recursos/Logo.png" alt=""></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="Antonio Jimenez">
+            </div>
+            <h1>Antonio Jiménez</h1>
+            <h2>Marketing</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/AJimenezMKT" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/antoniojimenezmkt/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Antonio_mkt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@tonyjimenezz" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/15545345321?text=Hola,%20Me%20gustaría%20saber%20más%20acerca%20de%20..." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a>
+            </div>
+        </div>
+        <div class="scrollmas">
+            <a href="#sobremi"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Juan Antonio Jiménez.</span> Recientemente egresé de la Universidad Tecnológica de Nezahualcóyotl como Lic. en innovación de negocios área de mercadotecnia. Me gustaría poner en práctica mis conocimientos teóricos y mis habilidades prácticas contribuyendo en la mercadotecnia de tus proyectos. De esta manera, ganaría experiencia y creceríamos juntos. También creo contenido de entretenimiento en redes sociales. Me gustaría que les eches un vistazo y me digas qué te parece.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            24-06-1994
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +52 55 4534 5321
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            tsu.antoniojimenez@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Juárez Pantitlan, 57460 Nezahualcóyotl, Méx.
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-clapperboard"></i>
+                            <span>CINE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>APRENDER</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>ARTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>DISEÑAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <a class="descargar" href="img/Antonio jiménez-curriculum.pdf" download="Antonio jiménez-curriculum.pdf">
+            <button>
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>HABILIDADES</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <div class="skill">
+                        <span>Illustrator</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Fotografía de producto</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Edición de video</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Gestión de Proyectos</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Lic. en Innovación de Negocios</h4>
+                        <span class="casa">Universidad Tecnologica de Nezahualcóyotl</span>
+                        <span class="fecha">2020 - 2022</span>
+                        <p>Durante mi licenciatura en Innovación de Negocios, aprendí a desarrollar soluciones innovadoras para los desafíos empresariales, a analizar tendencias y oportunidades en el mercado, a diseñar y ejecutar planes estratégicos de negocio, a liderar equipos de trabajo efectivos y a tomar decisiones basadas en datos. También adquirí habilidades en comunicación efectiva y gestión de proyectos.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Tsu. Desarrollo de negocios área mercadotecnia</h4>
+                        <span class="casa">Universidad Tecnologica de Nezahualcóyotl</span>
+                        <span class="fecha">2018 - 2020</span>
+                        <p>Durante mis estudios en Desarrollo de Empresas en el área de Mercadotecnia, adquirí habilidades en la gestión de proyectos, análisis de mercado, investigación de consumidores, planificación de estrategias de marketing y creación de contenido publicitario efectivo. También desarrollé habilidades en comunicación, liderazgo y resolución de problemas.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Preparatoria</h4>
+                        <span class="casa">Colegio de bachilleres #07</span>
+                        <span class="fecha">2012 - 2015</span>
+                        <p>Adquirí una formación sólida en matemáticas, ciencias, humanidades y ciencias sociales. Aprendí a pensar críticamente, a trabajar en equipo, a resolver problemas complejos y a comunicar ideas de manera efectiva. También desarrollé habilidades de investigación y análisis de datos, y obtuve una base sólida para continuar mis estudios universitarios.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Freelance</h4>
+                        <span class="casa">Independiente</span>
+                        <span class="fecha">2022 - Actual</span>
+                        <p>Como freelancer, he desarrollado habilidades de autogestión, especializándome en la creación y gestión de contenido digital para diversos clientes, trabajando en colaboración con equipos remotos y adquiriendo habilidades en la negociación y gestión de contratos. Mi experiencia me ha permitido desarrollar habilidades valiosas en el campo del marketing digital y la gestión de proyectos, así como una capacidad de adaptación y flexibilidad ante diferentes clientes y situaciones.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Atención a Clientes</h4>
+                        <span class="casa">DIF Nezahualcóyotl</span>
+                        <span class="fecha">2022 - 2022</span>
+                        <p>En esta posición, fui responsable de recibir y atender a las personas que acudían a las instalaciones, brindándoles información y orientación sobre los servicios disponibles. Asimismo, me encargué de llevar a cabo el registro y seguimiento de las solicitudes y requerimientos de los usuarios, asegurándome de que se cumplieran en tiempo y forma. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Community Manager</h4>
+                        <span class="casa">Grupo IMMAAC</span>
+                        <span class="fecha">2021 - 2022</span>
+                        <p>Gestioné las redes sociales de la empresa, desarrollé estrategias de contenido, creé y publiqué contenido en diversas plataformas, monitoreé y respondí a comentarios y mensajes, trabajé en colaboración con otros departamentos y adquirí habilidades en el manejo de herramientas de análisis y métricas, la creación de contenido atractivo y la gestión de la reputación en línea.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO</h2>
+            <div class="galeria">
+
+                <div class="proyecto">
+                    <img src="img/galery/pub.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Publicidad</h3>
+                        <p>Te ayudo a crear publicidad que puedas distribuir en medios digitales.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/pubimp.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Publicidad Impresa</h3>
+                        <p>Te ayudo a crear la publicidad impresa que necesita tu negocio</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/catpdf.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño de Catalogos en PDF</h3>
+                        <p>Te ayudo a crear tus propios catalogos en formato pdf para que puedas distribuirlo por whatsapp o una pagina web.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/branding.jpg" alt="Diseño de marca">
+                    <div class="overlay">
+                        <h3>Diseño de Marca</h3>
+                        <p>Te ayudo a crear un concepto al rededor de tu marca.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/fot-prod.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Fotografía de Producto</h3>
+                        <p>Te ayudo a destacar las mejores caracteristicas de tu producto atravez de fotografías profecionales.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/pakagin.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño de empaques</h3>
+                        <p>Te ayudo a diseñar un empaquetado atractivo e inteligente que mejore la experiencia de los compradores y proteja tu producto.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/inv-merc.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Investigación de Mercados</h3>
+                        <p>Te ayudo a investigar en que posición se encuentra actualmente tu emprendimiento aportandote información para que puedas tomar mejores decisiones.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/dis-web.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño de Paginas Web</h3>
+                        <p>Te ayudo a diseñar un sitio web hecho a la medida para tu negocio.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="img/galery/ecomerce.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Tiendas Online</h3>
+                        <p>Te ayudo a crear tu propia tienda online y te enseño a actualizarla por ti mismo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <form action="https://formsubmit.co/tsu.antoniojimenez@gmail.com" method="POST" >
+        <section id="contacto" class="contacto">
+            <div class="contenido-seccion">
+                <h2>CONTACTO</h2>
+                <div class="fila">
+                    <!-- Formulario -->
+                    <div class="col">
+                        <input type="text" name="name" placeholder="Tú Nombre" required>
+                        <input type="text" name="phone" placeholder="Número telefónico" required>
+                        <input type="text" name="email" placeholder="Dirección de correo" required required>
+                        <input type="text" name="tema" placeholder="Tema" required>
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje"></textarea required>
+                        <button>
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500" >
+                        <input type="hidden" name="_captcha" value="false" >
+
+
+                    </div>
+                    <!-- Mapa -->
+                    <div class="col">
+                        <img src="img/ubicacion.png" alt="">
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Juárez Pantitlan, 57460 Nezahualcóyotl, Méx.
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    Whatsapp: <br> +52 55 4534 5321 
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Email: <br> tsu.antoniojimenez@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/AJimenezMKT"><i class="fa-brands fa-facebook-f" target="_blank"></i></a>
+            <a href="https://www.instagram.com/antoniojimenezmkt/"><i class="fa-brands fa-instagram" target="_blank"></i></a>
+            <a href="https://www.youtube.com/@Antonio_mkt"><i class="fa-brands fa-youtube" target="_blank"></i></a>
+            <a href="https://www.tiktok.com/@tonyjimenezz"><i class="fa-brands fa-tiktok" target="_blank"></i></a>
+            <a href="https://wa.me/15545345321?text=Hola,%20Me%20gustaría%20saber%20más%20acerca%20de%20... target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
