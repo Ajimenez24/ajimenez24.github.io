@@ -554,6 +554,7 @@ section[id] {
     height: fit-content;
     margin: 10px;
     cursor: pointer;
+    display: inline-block;
 }
 .portfolio .galeria .proyecto img{
     width: 100%;
@@ -588,7 +589,23 @@ section[id] {
 .portfolio .galeria .proyecto .overlay:hover h3{
     margin-bottom: 5px;
 }
+.sabermas{
+position: absolute;
+text-align: center;
+display: flex;
+flex-direction: column;
+top: 90%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: roboto;
+font-size: 15px;
+color: #fff;
+background-color: var(--2color);
+border-radius: 50px;
+padding: 2px 8px;
 
+
+}
 /* SECCION CONTACTO */
 .contacto{
     background-image: url(img/contact_bg.png);
@@ -781,5 +798,9 @@ footer .arriba{
     }
     .contacto .fila .col{
         width: 100%;
+    }
+    .inicio .scrollmas{
+    position: relative;
+    top: -75px;
     }
 }
