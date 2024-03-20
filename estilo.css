@@ -89,7 +89,6 @@ section[id] {
     color: #fff;
     display: flex;
     align-items: center;
-    display: flex;
     flex-direction: column;
 }
 .inicio .contenido-banner{
@@ -627,6 +626,7 @@ padding: 2px 8px;
     display: flex;
 }
 .contacto .col{
+    text-decoration: none;
     width: 50%;
     padding: 10px;
     position: relative;
@@ -689,6 +689,7 @@ padding: 2px 8px;
     color: var(--2color);
     display: inline-block;
     margin-right: 20px;
+    text-decoration: none;
 }
 footer{
     background-color: var(--fondo2);

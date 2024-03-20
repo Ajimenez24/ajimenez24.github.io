@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-<cabeza>
-    <meta juego de caracteres="UTF-8">
-    <meta http-equiv="Compatible con X-UA" contenido="IE = edge">
-    <meta nombre="puerto de observación" contenido="ancho = ancho del dispositivo, escala inicial = 1.0">
-    <enlace rel="hoja de estilo" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integridad="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A ==" de origen cruzado="anonymous" referrerpolicy="no-referrer" />
-    <enlace href="https://fonts.googleapis.com/css?familia = Roboto: 400,900&display = swap " rel="hoja de estilo">
-    <título>Antonio Jiménez</título>
-    <enlace rel="hoja de estilo" href="estilo.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+    <title>Antonio Jiménez</title>
+    <link rel="stylesheet" href="estilo.css">
     <!-- Para el favicon en la pestaña activa -->
-    <enlace rel="icono" href="/img/Logo.png" tipo="imagen / x-icón">
-</cabeza>
-<cuerpo clase="todo">
+    <link rel="icon" href="/img/Logo.png" type="image/x-icon">
+</head>
+<body class="todo">
     <!-- MENU ENCABEZADO -->
-    <div clase="contenedor-encabezado">
-        <cabezazo>
-            <div clase="logotipo">
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
                 <!-- <a href="index.html">A</a> -->
-                <a href="index.html"><img src="img / Logo.png" alt="Antonio Jiménez"></a>
-            </div >
-            <nav identificaciónentificaciónentificación="nav">
+                <a href="index.html"><img src="img/Logo.png" alt="Antonio Jiménez"></a>
+            </div>
+            <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" al hacer clic="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" al hacer clic="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#habilidades" al hacer clic="seleccionar()">HABILIDADES</a></li>
-                    <li><a href="#curriculum" al hacer clic="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#cartera" al hacer clic="seleccionar()">CARTERA</a></li>
-                    <li><a href="#contacto" al hacer clic="seleccionar()">CONTACTO</a></li>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
-            </nav >
-            <div clase="respetuoso del navegador" al hacer clic="mostrarOcultarMenu()">
-                <i clase="fa-solid fa-bars"></i>
-            </div >
-        </cabezazo>
-    </div >
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
 
     <!-- SECCION INICIO -->
-    <sección identificaciónentificaciónentificación="inicio" clase="inicio">
-        <div clase="contenido-banner">
-            <div clase="contenedor-img">
-                <img src="img / hero.png" alt="Antonio Jiménez">
-            </div >
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="Antonio Jimenez">
+            </div>
             <h1>Antonio Jiménez</h1>
-            <h2>Comercialización</h2>
-            <div clase="redes">
-                <a href="https://www.facebook.com/AJimenezMKT" objetivo="_en blanco"><i clase="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/antoniojimenezmkt/" objetivo="_en blanco"><i clase="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@Antonio_mkt" objetivo="_en blanco"><i clase="fa-brands fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@tonyjimenezz" objetivo="_en blanco"><i clase="fa-brands fa-tiktok"></i></a>
-                <a href="https://wa.me/15545345321?texto = Hola,% 20Me% 20gustaría% 20saber% 20más% 20acerca% 20de% 20..." objetivo="_en blanco"><i clase="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.linkedin.com/in/juan-jimenez-212168276/"><i clase="fa-brands fa-linkedin-in" objetivo="_en blanco"></i></a>
-            </div >
-        </div >
-        <div clase="scrollmas">
-            <a href="#sobremi"><i clase="fa-solid fa-angles-down"></i></a>
-        </div >
-    </sección >
+            <h2>Marketing</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/AJimenezMKT" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/antoniojimenezmkt/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Antonio_mkt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@tonyjimenezz" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/15545345321?text=Hola,%20Me%20gustaría%20saber%20más%20acerca%20de%20..." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/juan-jimenez-212168276/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="scrollmas">
+            <a href="#sobremi"><i class="fa-solid fa-angles-down"></i></a>
+        </div>
+    </section>
 
     <!-- SECCION SOBRE MI -->
-    <sección identificaciónentificaciónentificación="sobremi" clase="sobremi">
-        <div clase="contenido-seccion">
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Juan Antonio Jiménez.</span> Reciente egresado de la Universidad Tecnológica de Nezahualcóyotl como Lic. en innovación de negocios área de mercadotecnia. Me gusta poner en práctica mis conocimientos técnicos y mis habilidades prácticas contribuyentes en la mercadotecnia de tus proyectos. De esta manera, ganaría experiencia y creceríos juntos. También creo contenido de entretenimiento en redes sociales. Me gustaría que les eches un vista y me digas qué te parece.</p>
+            <p><span>Hola, soy Juan Antonio Jiménez.</span> Egresado de la Universidad Tecnológica de Nezahualcóyotl como Lic. en innovación de negocios área de mercadotecnia. Me gustaría poner en práctica mis conocimientos teóricos y mis habilidades prácticas contribuyendo en la mercadotecnia de tus proyectos. De esta manera, ganaría experiencia y creceríamos juntos. También creo contenido de entretenimiento en redes sociales. Me gustaría que les eches un vistazo y me digas qué te parece.</p>
 
             <div class="fila">
                 <!-- datos personales -->
@@ -69,7 +69,7 @@
                     <h3>Datos Personales</h3>
                     <ul>
                         <li>
-                            <strong>Cumpleaños</strong>
+                            <strong>Fecha de nacimiento</strong>
                             24-06-1994
                         </li>
                         <li>
@@ -132,7 +132,7 @@
                 </div>
             </div>
             <a class="descargar" href="img/Antonio jiménez-curriculum.pdf" download="Antonio jiménez-curriculum.pdf">
-            <button>
+                <button>
                     Descargar CV <i class="fa-solid fa-download"></i>
                     <span class="overlay"></span>
                 </button>
@@ -421,23 +421,24 @@
                     </div>
                     <!-- Mapa -->
                     <div class="col">
-                        <img src="img/ubicacion.png" alt="">
-                        <div class="info">
-                            <ul>
-                                <li>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    Juárez Pantitlan, 57460 Nezahualcóyotl, Méx.
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-mobile-screen"></i>
-                                    Whatsapp: <br> +52 55 4534 5321 
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-envelope"></i>
-                                    Email: <br> tsu.antoniojimenez@gmail.com
-                                </li>
-                            </ul>
-                        </div>
+                        <a href="https://www.google.com.mx/maps/@19.4034164,-99.0511601,15.75z?entry=ttu" target="_blank">
+                            <img src="img/ubicacion.png" alt=""></a>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Juárez Pantitlan, 57460 Nezahualcóyotl, Méx.
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                        Whatsapp: <br> +52 55 4534 5321 
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Email: <br> tsu.antoniojimenez@gmail.com
+                                    </li>
+                                </ul>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -455,7 +456,7 @@
             <a href="https://www.youtube.com/@Antonio_mkt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.tiktok.com/@tonyjimenezz" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://wa.me/15545345321?text=Hola,%20Me%20gustaría%20saber%20más%20acerca%20de%20..." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/juan-jimenez-212168276/"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a>
+            <a href="https://www.linkedin.com/in/juan-jimenez-212168276/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
     <div>
         <a class="secret" href="Colemak.zip" download="Colemak.zip">
