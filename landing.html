@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Automatiza tu negocio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f9fc;
+    color:#111827;
+    line-height:1.5;
+}
+
+/* HERO */
+.logo{
+    width:50px;
+    margin-bottom:20px;
+}
+
+.hero{
+    background:#04111f;
+    color:white;
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-left{
+    flex:1;
+    min-width:200px;
+}
+
+.badge{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:999px;
+    margin-bottom:25px;
+    font-size:14px;
+    color:#4fc3ff;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#28c7ff;
+}
+
+.hero p{
+    font-size:20px;
+    color:#cbd5e1;
+    max-width:650px;
+    margin-bottom:35px;
+}
+
+.cta{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:18px 32px;
+    border-radius:16px;
+    font-size:18px;
+    font-weight:700;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(34,197,94,0.35);
+}
+
+.cta:hover{
+    transform:translateY(-2px);
+    background:#1faa52;
+}
+
+.hero-right{
+    flex:1;
+    min-width:320px;
+    display:flex;
+    justify-content:center;
+}
+
+.mockup{
+    width:100%;
+    max-width:520px;
+    border-radius:28px;
+    /* background:#071a2c; */
+    /* padding:35px; */
+    /* border:1px solid rgba(255,255,255,0.08); */
+    /* box-shadow:0 25px 60px rgba(0,0,0,0.45); */
+}
+
+.mockup img{
+    width:100%;
+    border-radius:28px;
+}
+
+/* SECTION */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#64748b;
+    font-size:18px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:24px;
+    padding:35px 28px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card-icon{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.card p{
+    color:#64748b;
+}
+
+/* BENEFITS */
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.benefit{
+    text-align:center;
+    background:white;
+    border-radius:24px;
+    padding:40px 30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.benefit h3{
+    margin:18px 0 10px;
+}
+
+.benefit p{
+    color:#64748b;
+}
+
+/* CTA FINAL */
+
+.final-cta{
+    background:#04111f;
+    color:white;
+    padding:70px 8%;
+    border-radius:30px;
+    margin:80px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.final-cta h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.final-cta p{
+    color:#cbd5e1;
+    max-width:600px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#64748b;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .section-title h2{
+        font-size:36px;
+    }
+
+    .final-cta h2{
+        font-size:34px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+    
+    <div class="hero-left">
+        <img class="logo" src="img/Logo.png" alt="Antonio Jimenez">
+
+
+        <h1>
+            Automatizo tareas repetitivas para que <span>ahorres tiempo</span>.
+        </h1>
+
+        <p>
+            Creo automatizaciones personalizadas para personas que quieren trabajar más rápido, reducir errores y enfocarse en crecer.
+        </p>
+
+        <a class="cta" href="https://wa.me/5215545345321" target="_blank">
+            💬 Escríbeme por WhatsApp
+        </a>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="mockup">
+            <img src="img/laptop.png" alt="automatización">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section class="section">
+
+    <div class="section-title">
+        <h2>¿Qué puedo automatizar?</h2>
+        <p>
+            Soluciones adaptadas a las necesidades de tu negocio.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Reportes automáticos</h3>
+            <p>Generación y envío de reportes sin intervención manual.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📁</div>
+            <h3>Organización de datos</h3>
+            <p>Automatiza procesos de información y bases de datos.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📧</div>
+            <h3>Correos automáticos</h3>
+            <p>Envíos automáticos y seguimiento inteligente.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🔗</div>
+            <h3>Integraciones</h3>
+            <p>Conecta herramientas y plataformas entre sí.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3>Procesos personalizados</h3>
+            <p>Automatizaciones hechas a la medida de tu negocio.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BENEFICIOS -->
+
+<section class="section">
+
+    <div class="section-title">
+        <h2>¿Para quién es esto?</h2>
+        <p>
+            Para negocios que quieren trabajar mejor y crecer más rápido.
+        </p>
+    </div>
+
+    <div class="benefits">
+
+        <div class="benefit">
+            <div class="card-icon">⏳</div>
+            <h3>Ahorra tiempo</h3>
+            <p>Deja que la tecnología haga lo repetitivo por ti.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="card-icon">📈</div>
+            <h3>Más productividad</h3>
+            <p>Optimiza procesos y trabaja con mayor eficiencia.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="card-icon">✅</div>
+            <h3>Menos errores</h3>
+            <p>Reduce fallos humanos y mejora resultados.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="card-icon">🚀</div>
+            <h3>Escalabilidad</h3>
+            <p>Automatizaciones que crecen junto con tu negocio.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA FINAL -->
+
+<section class="final-cta">
+
+    <div>
+        <h2>Hablemos de tu proyecto</h2>
+
+        <p>
+            Cuéntame qué necesitas automatizar y te propongo una solución personalizada para tu negocio.
+        </p>
+    </div>
+
+    <a class="cta" href="https://wa.me/5215545345321" target="_blank">
+        💬 WhatsApp
+    </a>
+
+</section>
+
+<footer>
+    Automatización inteligente para negocios • Python • Automatizaciones a medida
+</footer>
+
+</body>
+</html>
