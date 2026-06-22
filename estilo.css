@@ -302,6 +302,11 @@ section[id] {
     display: block;
     margin-bottom: 10px;
 }
+.skills .skill > p{
+    font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+}
 .skills .skill .barra-skill{
     height: 10px;
     width: 80%;
@@ -337,7 +342,7 @@ section[id] {
 }
 @keyframes javascript {
     0%{width: 0%;}
-    100%{width: 60%;}
+    100%{width: 70%;}
 }
 
 .skills .skill .htmlcss{
@@ -420,6 +425,44 @@ section[id] {
     0%{width: 0%;}
     100%{width: 80%;}
 }
+/* seccion carousel */
+.carousel {
+    padding: 50px auto;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    background-color: #252A2E;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+}
+.card {
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+.card img {
+    height: 4em;
+    width: 4em;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
 /* SECCION CURRICULUM */
 .curriculum{
     background-color: var(--fondo);
