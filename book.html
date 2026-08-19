@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Portafolio de Video</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+.portfolio{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.portfolio h1{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.portfolio .subtitle{
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:50px;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,300px));
+    justify-content:center;
+    gap:25px;
+}
+
+/* VIDEO PRINCIPAL */
+
+.featured{
+    grid-column:1 / -1;
+}
+
+/* TARJETAS */
+
+.video-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.video-card video{
+    width:100%;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    display:block;
+}
+
+/* .video-card:hover video{
+    transform:scale(1.05);
+} */
+
+.info{
+    padding:15px;
+    background:#1e293b;
+}
+
+.info h3{
+    margin-bottom:8px;
+    font-size:1rem;
+}
+
+.info p{
+    color:#94a3b8;
+    font-size:.85rem;
+    line-height:1.5;
+}
+
+.video-card{
+    transition:.3s;
+}
+
+.video-card:hover{
+    transform:translateY(-5px);
+}
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,300px));
+    justify-content:center;
+    gap:25px;
+}
+
+.image-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.image-card:hover{
+    transform:translateY(-5px);
+}
+
+.image-card img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:block;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:50px;
+}
+
+.mag-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.mag-card{
+    background:#1e293b;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.mag-card:hover{
+    transform:translateY(-6px);
+}
+
+.mag-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.mag-card:hover img{
+    transform:scale(1.05);
+}
+
+/* reutiliza tu info */
+.info{
+    padding:15px;
+    background:#1e293b;
+}
+
+.info h3{
+    font-size:1rem;
+    margin-bottom:5px;
+}
+
+.info p{
+    font-size:.85rem;
+    color:#94a3b8;
+}
+
+.mag-card{
+    filter:grayscale(10%);
+    transition:.4s;
+}
+
+.mag-card:hover{
+    filter:grayscale(0%);
+    transform:translateY(-8px);
+}
+
+.lightbox{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    transform:scale(0.95);
+    animation:pop .2s ease forwards;
+}
+
+@keyframes pop{
+    to{ transform:scale(1); }
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured{
+        grid-column:auto;
+    }
+
+    .portfolio h1{
+        font-size:2rem;
+    }
+
+}
+
+
+/* =========================
+   PORTADA / HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    max-width:1300px;
+    margin:auto;
+    padding:50px 30px 70px;
+    display:grid;
+    grid-template-columns:minmax(280px,.9fr) minmax(420px,1.25fr);
+    gap:55px;
+    align-items:center;
+}
+
+.hero-content{
+    padding:50px ;
+    max-width:570px;
+}
+
+.hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    color:#94a3b8;
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.hero-eyebrow::before{
+    content:"";
+    width:34px;
+    height:2px;
+    background:#94a3b8;
+}
+
+.hero h1{
+    font-size:clamp(3rem,6vw,5.8rem);
+    line-height:.95;
+    letter-spacing:-.06em;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#94a3b8;
+}
+
+.hero-description{
+    max-width:500px;
+    color:#94a3b8;
+    font-size:1.05rem;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 22px;
+    border:1px solid #475569;
+    border-radius:999px;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.hero-button:hover{
+    background:#fff;
+    color:#0f172a;
+    transform:translateY(-2px);
+}
+
+.hero-media{
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.hero-video-wrap{
+    width:min(100%,470px);
+    aspect-ratio:9/14;
+    border-radius:28px;
+    overflow:hidden;
+    background:#020617;
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+    position:relative;
+}
+
+.hero-video-wrap video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.hero-results{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px 100px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.result-card{
+    min-height:210px;
+    padding:30px;
+    border:1px solid #334155;
+    border-radius:22px;
+    background:linear-gradient(145deg,#1e293b,#172033);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    position:relative;
+    overflow:hidden;
+}
+
+.result-card::after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:rgba(148,163,184,.07);
+    right:-45px;
+    top:-45px;
+}
+
+.result-label{
+    color:#94a3b8;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.result-number{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    line-height:1;
+    font-weight:800;
+    letter-spacing:-.05em;
+    margin-bottom:10px;
+}
+
+.result-description{
+    color:#cbd5e1;
+    font-size:.95rem;
+}
+
+.hero-divider{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.hero-divider hr{
+    border:0;
+    border-top:1px solid #1e293b;
+}
+
+@media(max-width:850px){
+    .hero{
+        min-height:auto;
+        grid-template-columns:1fr;
+        padding-top:70px;
+        gap:45px;
+    }
+
+    .hero-content{
+        max-width:none;
+        text-align:center;
+        margin:auto;
+    }
+
+    .hero-eyebrow{
+        justify-content:center;
+    }
+
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-media{
+        order:2;
+    }
+
+    .hero-results{
+        grid-template-columns:1fr;
+        padding-bottom:70px;
+    }
+}
+
+@media(max-width:520px){
+    .hero{
+        padding:45px 20px 55px;
+    }
+
+    .hero h1{
+        font-size:3.2rem;
+    }
+
+    .hero-video-wrap{
+        width:82%;
+        border-radius:22px;
+    }
+
+    .result-card{
+        min-height:180px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     PORTADA
+========================= -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-eyebrow">
+            Antonio Jiménez • Marketing Digital
+        </div>
+
+        <h1>
+            Marketing que se ve.<br>
+            <span>Resultados que se miden.</span>
+        </h1>
+
+        <p class="hero-description">
+            Creo contenido, diseños y estrategias digitales que ayudan a las
+            marcas a comunicar mejor, conectar con su audiencia y conseguir resultados.
+        </p>
+
+        <a class="hero-button" href="#trabajos">
+            Ver mi trabajo ↓
+        </a>
+
+    </div>
+
+    <div class="hero-media">
+
+        <div class="hero-video-wrap">
+
+            <video autoplay muted loop playsinline controls>
+                <source src="img/book/video portada.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="hero-results">
+
+    <article class="result-card">
+
+        <div class="result-label">
+            Resultado de campaña
+        </div>
+
+        <div class="result-number">
+            +13.9K
+        </div>
+
+        <div class="result-description">
+            Reproducciones obtenidas.
+        </div>
+
+    </article>
+
+    <article class="result-card">
+
+        <div class="result-label">
+            interacciónes
+        </div>
+
+        <div class="result-number">
+            +1953 LIKES
+        </div>
+
+        <div class="result-description">
+            +100 seguidores nuevos en redes sociales.
+        </div>
+
+    </article>
+
+</section>
+
+<div class="hero-divider">
+    <hr>
+</div>
+
+<section class="portfolio" id="trabajos">
+
+    <h1>Mi Portafolio</h1>
+
+    <p class="subtitle">
+        Edición de Video • Marketing Digital • Motion Graphics
+    </p>
+
+    <div class="video-grid">
+
+        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 1.1.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Grato Momento</h3>
+                <p>Video promocional para Grato Momento</p>
+            </div>
+
+        </div>
+
+        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 2.1.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>El Coyote Grill</h3>
+                <p>Video promocional para El Coyote Grill</p>
+            </div>
+
+        </div>
+
+        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 3.1.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>El Coyote Grill</h3>
+                <p>Video para promocionar la preinauguración</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 1.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farma2web</h3>
+                <p>Video presentación de servicios</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 2.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farma2web</h3>
+                <p>Video para posicionar la marca</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 3.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farma2web</h3>
+                <p>Video para promocionar los servicios</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 4.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farma2web</h3>
+                <p>Video para promocionar descuentos</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 5.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farma2web</h3>
+                <p>Video catalogo para redes sociales</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 6.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farmapronto</h3>
+                <p>Video promocional ofertas de verano</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 7.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farmapronto</h3>
+                <p>Video promocional 25% de descuento</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 8.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farmapronto</h3>
+                <p>Video para posicionar la marca</p>
+            </div>
+
+        </div>        <div class="video-card">
+
+            <video controls poster="">
+                <source src="img/book/video 9.mp4" type="video/mp4">
+            </video>
+
+            <div class="info">
+                <h3>Farmapronto</h3>
+                <p>Video para promocionar seccion regalos</p>
+            </div>
+
+
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2 class="section-title">Diseños</h2>
+    <p class="section-subtitle">Publicidad Impresa • Branding • Flyers • Posters</p>
+
+    <div class="mag-grid">
+
+        <div class="mag-card">
+            <img src="img/book/imagen 1.webp">
+            <div class="info">
+                <h3>Catalogo Impreso y Digital</h3>
+                <p>Catalogo con promociones impreso y digital</p>
+            </div>
+        </div>
+
+        <div class="mag-card">
+            <img src="img/book/imagen 2.webp">
+            <div class="info">
+                <h3>Folleto de Servicios</h3>
+                <p>Diseño de flayer para promocionar servicios</p>
+            </div>
+        </div>
+
+        <div class="mag-card">
+            <img src="img/book/imagen 3.webp">
+            <div class="info">
+                <h3>Comunicación Corporativa Interna</h3>
+                <p>Diseño instruccional para los colaboradores</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 4.webp">
+            <div class="info">
+                <h3>Flayer para Promocionar Monedero Electronico</h3>
+                <p>diseño con pasos para utilizar correctamente el monedero electrónico</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 5.webp">
+            <div class="info">
+                <h3>Diseño con Datos Para Transferencias</h3>
+                <p>diseño para facilitar el proceso de transferencias</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 6.webp">
+            <div class="info">
+                <h3>Flayer Digital</h3>
+                <p>Diseño para promocionar precios especiales en redes sociales</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 7.webp">
+            <div class="info">
+                <h3>Cartel Impreso</h3>
+                <p>Diseño de cartel impreso para colocar en sucursal</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 8.webp">
+            <div class="info">
+                <h3>Vinil Autoadhesivo</h3>
+                <p>Diseño de publicidad fisica para sucursales</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 9.webp">
+            <div class="info">
+                <h3>Vinil Autoadhesivo</h3>
+                <p>Diseño de publicidad fisica para sucursales</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 10.webp">
+            <div class="info">
+                <h3>Cartel Impreso</h3>
+                <p>Diseño de cartel impreso para colocar en sucursal</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 11.webp">
+            <div class="info">
+                <h3>vinil Autoadhesivo</h3>
+                <p>Diseño de publicidad para ocultar desperfectos en el refrigerador</p>
+            </div>
+        </div>
+        <div class="mag-card">
+            <img src="img/book/imagen 12.webp">
+            <div class="info">
+                <h3>Video Menú</h3>
+                <p>Video menú para proyectar promociones dentro de la sucursal </p>
+            </div>
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+// abrir al dar click en cualquier imagen del grid
+document.querySelectorAll(".mag-card img, .image-card img").forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+    });
+});
+
+// cerrar
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+// cerrar al dar click fuera de la imagen
+lightbox.addEventListener("click", (e) => {
+    if(e.target === lightbox){
+        lightbox.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>
