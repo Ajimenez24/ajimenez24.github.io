@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Antonio Jiménez - Mi Portafolio de Video</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ajimenez24.github.io/book/">
+    <meta property="og:title" content="Antonio Jiménez - Mi Portafolio de Video">
+    <meta property="og:description"
+        content="Portafolio de videos y contenido digital creado para conectar marcas, productos e ideas con su audiencia.">
+    <meta property="og:image"
+        content="https://ajimenez24.github.io/img/book/miniatura.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Antonio Jiménez - Mi Portafolio de Video">
+    <meta name="twitter:description"
+        content="Portafolio de videos y contenido digital creado para conectar marcas, productos e ideas con su audiencia.">
+    <meta name="twitter:image"
+        content="https://ajimenez24.github.io/img/book/miniatura.jpg">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+
+        /* =========================
+           PORTAFOLIO
+        ========================= */
+
+        .portfolio {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .portfolio h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .portfolio .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 50px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .featured {
+            grid-column: 1 / -1;
+        }
+
+
+        /* =========================
+           TARJETAS DE VIDEO
+        ========================= */
+
+        .video-card {
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+            transition: .3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card video {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            display: block;
+            background: #020617;
+        }
+
+
+        /* =========================
+           INFORMACIÓN
+        ========================= */
+
+        .info {
+            padding: 15px;
+            background: #1e293b;
+        }
+
+        .info h3 {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .info p {
+            color: #94a3b8;
+            font-size: .85rem;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           IMÁGENES
+        ========================= */
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .image-card {
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+            transition: .3s;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 50px;
+        }
+
+
+        /* =========================
+           DISEÑOS
+        ========================= */
+
+        .mag-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .mag-card {
+            background: #1e293b;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            transition: .4s;
+            filter: grayscale(10%);
+        }
+
+        .mag-card:hover {
+            filter: grayscale(0%);
+            transform: translateY(-8px);
+        }
+
+        .mag-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: .4s;
+        }
+
+        .mag-card:hover img {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           LIGHTBOX
+        ========================= */
+
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+            transform: scale(.95);
+            animation: pop .2s ease forwards;
+        }
+
+        @keyframes pop {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+
+        /* =========================
+           PORTADA / HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            max-width: 1300px;
+            margin: auto;
+            padding: 50px 30px 70px;
+            display: grid;
+            grid-template-columns: minmax(280px, .9fr) minmax(420px, 1.25fr);
+            gap: 55px;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding: 50px;
+            max-width: 570px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 22px;
+            color: #94a3b8;
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .hero-eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 2px;
+            background: #94a3b8;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5.8rem);
+            line-height: .95;
+            letter-spacing: -.06em;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #94a3b8;
+        }
+
+        .hero-description {
+            max-width: 500px;
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border: 1px solid #475569;
+            border-radius: 999px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .hero-button:hover {
+            background: #fff;
+            color: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        .hero-media {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-video-wrap {
+            width: min(100%, 470px);
+            aspect-ratio: 9 / 14;
+            border-radius: 28px;
+            overflow: hidden;
+            background: #020617;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
+            position: relative;
+        }
+
+        .hero-video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #020617;
+        }
+
+
+        /* =========================
+           RESULTADOS
+        ========================= */
+
+        .hero-results {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .result-card {
+            min-height: 210px;
+            padding: 30px;
+            border: 1px solid #334155;
+            border-radius: 22px;
+            background: linear-gradient(145deg, #1e293b, #172033);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-card::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(148, 163, 184, .07);
+            right: -45px;
+            top: -45px;
+        }
+
+        .result-label {
+            color: #94a3b8;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .result-number {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: -.05em;
+            margin-bottom: 10px;
+        }
+
+        .result-description {
+            color: #cbd5e1;
+            font-size: .95rem;
+        }
+
+        .hero-divider {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-divider hr {
+            border: 0;
+            border-top: 1px solid #1e293b;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .hero {
+                min-height: auto;
+                grid-template-columns: 1fr;
+                padding-top: 70px;
+                gap: 45px;
+            }
+
+            .hero-content {
+                max-width: none;
+                text-align: center;
+                margin: auto;
+            }
+
+            .hero-eyebrow {
+                justify-content: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-media {
+                order: 2;
+            }
+
+            .hero-results {
+                grid-template-columns: 1fr;
+                padding-bottom: 70px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured {
+                grid-column: auto;
+            }
+
+            .portfolio h1 {
+                font-size: 2rem;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            .hero {
+                padding: 45px 20px 55px;
+            }
+
+            .hero-content {
+                padding: 20px 0;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero-video-wrap {
+                width: 82%;
+                border-radius: 22px;
+            }
+
+            .result-card {
+                min-height: 180px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-eyebrow">
+                Antonio Jiménez • Marketing Digital
+            </div>
+
+            <h1>
+                Marketing que se ve.<br>
+                <span>Resultados que se miden.</span>
+            </h1>
+
+            <p class="hero-description">
+                Creo contenido, diseños y estrategias digitales que ayudan a las
+                marcas a comunicar mejor, conectar con su audiencia y conseguir resultados.
+            </p>
+
+            <a class="hero-button" href="#trabajos">
+                Ver mi trabajo ↓
+            </a>
+
+        </div>
+
+
+        <div class="hero-media">
+
+            <div class="hero-video-wrap">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/1.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112127/video_portada.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESULTADOS
+    ========================= -->
+
+    <section class="hero-results">
+
+        <article class="result-card">
+
+            <div class="result-label">
+                Resultado de campaña
+            </div>
+
+            <div class="result-number">
+                +13.9K
+            </div>
+
+            <div class="result-description">
+                Reproducciones obtenidas.
+            </div>
+
+        </article>
+
+
+        <article class="result-card">
+
+            <div class="result-label">
+                Interacciones
+            </div>
+
+            <div class="result-number">
+                +1953 LIKES
+            </div>
+
+            <div class="result-description">
+                +100 seguidores nuevos en redes sociales.
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <div class="hero-divider">
+        <hr>
+    </div>
+
+
+    <!-- =========================
+         PORTAFOLIO DE VIDEOS
+    ========================= -->
+
+    <section class="portfolio" id="trabajos">
+
+        <h1>Mi Portafolio</h1>
+
+        <p class="subtitle">
+            Edición de Video • Marketing Digital • Motion Graphics
+        </p>
+
+
+        <div class="video-grid">
+
+
+            <!-- VIDEO 1 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/2.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112142/video_1.1.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Grato Momento</h3>
+                    <p>Video promocional para Grato Momento</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 2 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/3.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112050/video_2.1.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>El Coyote Grill</h3>
+                    <p>Video promocional para El Coyote Grill</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 3 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/4.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112081/video_3.1.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>El Coyote Grill</h3>
+                    <p>Video para promocionar la preinauguración</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 4 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/5.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112057/video_1.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farma2web</h3>
+                    <p>Video presentación de servicios</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 5 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/6.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112138/video_2.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farma2web</h3>
+                    <p>Video para posicionar la marca</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 6 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/7.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112101/video_3.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farma2web</h3>
+                    <p>Video para promocionar los servicios</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 7 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/8.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112101/video_4.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farma2web</h3>
+                    <p>Video para promocionar descuentos</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 8 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/9.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112090/video_5.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farma2web</h3>
+                    <p>Video catálogo para redes sociales</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 9 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/10.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112095/video_6.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farmapronto</h3>
+                    <p>Video promocional ofertas de verano</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 10 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/11.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112136/video_7.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farmapronto</h3>
+                    <p>Video promocional 25% de descuento</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 11 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/12.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112104/video_8.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farmapronto</h3>
+                    <p>Video para posicionar la marca</p>
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 12 -->
+
+            <div class="video-card">
+
+                <video
+                    class="portfolio-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    poster="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787116845/13.webp">
+
+                    <source
+                        src="https://res.cloudinary.com/rzm8pnkl/video/upload/f_auto,q_auto/v1787112132/video_9.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <div class="info">
+                    <h3>Farmapronto</h3>
+                    <p>Video para promocionar sección regalos</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DISEÑOS
+    ========================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Diseños
+        </h2>
+
+        <p class="section-subtitle">
+            Publicidad Impresa • Branding • Flyers • Posters
+        </p>
+
+
+        <div class="mag-grid">
+
+
+            <!-- DISEÑO 1 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 1.webp"
+                    alt="Catálogo impreso y digital">
+
+                <div class="info">
+                    <h3>Catálogo Impreso y Digital</h3>
+                    <p>Catálogo con promociones impreso y digital</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 2 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="https://res.cloudinary.com/rzm8pnkl/image/upload/v1787111979/imagen_2.webp"
+                    alt="Folleto de servicios">
+
+                <div class="info">
+                    <h3>Folleto de Servicios</h3>
+                    <p>Diseño de flyer para promocionar servicios</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 3 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 3.webp"
+                    alt="Comunicación corporativa interna">
+
+                <div class="info">
+                    <h3>Comunicación Corporativa Interna</h3>
+                    <p>Diseño instruccional para los colaboradores</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 4 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 4.webp"
+                    alt="Flyer para promocionar monedero electrónico">
+
+                <div class="info">
+                    <h3>Flyer para Promocionar Monedero Electrónico</h3>
+                    <p>Diseño con pasos para utilizar correctamente el monedero electrónico</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 5 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 5.webp"
+                    alt="Diseño con datos para transferencias">
+
+                <div class="info">
+                    <h3>Diseño con Datos Para Transferencias</h3>
+                    <p>Diseño para facilitar el proceso de transferencias</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 6 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 6.webp"
+                    alt="Flyer digital">
+
+                <div class="info">
+                    <h3>Flyer Digital</h3>
+                    <p>Diseño para promocionar precios especiales en redes sociales</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 7 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 7.webp"
+                    alt="Cartel impreso">
+
+                <div class="info">
+                    <h3>Cartel Impreso</h3>
+                    <p>Diseño de cartel impreso para colocar en sucursal</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 8 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 8.webp"
+                    alt="Vinil autoadhesivo">
+
+                <div class="info">
+                    <h3>Vinil Autoadhesivo</h3>
+                    <p>Diseño de publicidad física para sucursales</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 9 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 9.webp"
+                    alt="Vinil autoadhesivo">
+
+                <div class="info">
+                    <h3>Vinil Autoadhesivo</h3>
+                    <p>Diseño de publicidad física para sucursales</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 10 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 10.webp"
+                    alt="Cartel impreso">
+
+                <div class="info">
+                    <h3>Cartel Impreso</h3>
+                    <p>Diseño de cartel impreso para colocar en sucursal</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 11 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 11.webp"
+                    alt="Vinil autoadhesivo">
+
+                <div class="info">
+                    <h3>Vinil Autoadhesivo</h3>
+                    <p>Diseño de publicidad para ocultar desperfectos en el refrigerador</p>
+                </div>
+
+            </div>
+
+
+            <!-- DISEÑO 12 -->
+
+            <div class="mag-card">
+
+                <img
+                    src="img/book/imagen 12.webp"
+                    alt="Video menú">
+
+                <div class="info">
+                    <h3>Video Menú</h3>
+                    <p>Video menú para proyectar promociones dentro de la sucursal</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LIGHTBOX
+    ========================= -->
+
+    <div id="lightbox" class="lightbox">
+
+        <span class="close">
+            &times;
+        </span>
+
+        <img
+            id="lightbox-img"
+            alt="Imagen ampliada">
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".close");
+
+
+        /* =========================
+           ABRIR IMÁGENES
+        ========================= */
+
+        document
+            .querySelectorAll(".mag-card img, .image-card img")
+            .forEach(img => {
+
+                img.addEventListener("click", () => {
+
+                    lightbox.style.display = "flex";
+                    lightboxImg.src = img.src;
+
+                });
+
+            });
+
+
+        /* =========================
+           CERRAR LIGHTBOX
+        ========================= */
+
+        closeBtn.addEventListener("click", () => {
+
+            lightbox.style.display = "none";
+
+        });
+
+
+        /* =========================
+           CERRAR AL HACER CLICK
+           FUERA DE LA IMAGEN
+        ========================= */
+
+        lightbox.addEventListener("click", (e) => {
+
+            if (e.target === lightbox) {
+
+                lightbox.style.display = "none";
+
+            }
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
